@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivy C. | Business Analytics Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         :root { --bg: #121212; --card-bg: #1e1e1e; --text: #ffffff; --accent: #bb86fc; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; text-align: center; }
         .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
         
-        /* Hero Section */
-        header img { width: 150px; border-radius: 50%; border: 3px solid var(--accent); }
+        header img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; }
         h1 { font-size: 2.5rem; margin: 20px 0 5px; }
         .tagline { color: #aaa; margin-bottom: 40px; }
 
-        /* Tech Stack Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 20px; margin: 50px 0; }
-        .tech-item { background: var(--card-bg); padding: 15px; border-radius: 10px; transition: 0.3s; }
-        .tech-item:hover { border: 1px solid var(--accent); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; margin: 50px 0; }
+        .tech-item { background: var(--card-bg); padding: 20px; border-radius: 10px; transition: 0.3s; border: 1px solid transparent; }
+        .tech-item:hover { border: 1px solid var(--accent); transform: scale(1.05); }
+        .tech-item i { font-size: 2.5rem; display: block; margin-bottom: 10px; }
 
-        /* Project Cards */
         .project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .project-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; text-align: left; transition: 0.3s; }
         .project-card:hover { transform: translateY(-10px); }
@@ -31,30 +30,31 @@
 <body>
     <div class="container">
         <header>
-            <img src="your-photo.jpg" alt="Ivy C.">
+            <img src="profile.jpg" alt="Ivy C.">
             <h1>Ivy C.</h1>
             <p class="tagline">Data Enthusiast | Problem Solver | Storyteller</p>
         </header>
 
         <h2>Tech Stack</h2>
         <div class="grid">
-            <div class="tech-item">Python</div>
-            <div class="tech-item">SQL</div>
-            <div class="tech-item">Tableau</div>
-            <div class="tech-item">Power BI</div>
-            <div class="tech-item">Excel</div>
+            <div class="tech-item"><i class="devicon-python-plain colored"></i>Python</div>
+            <div class="tech-item"><i class="devicon-azuresqldatabase-plain colored"></i>SQL</div>
+            <div class="tech-item"><i class="devicon-tableau-plain colored"></i>Tableau</div>
+            <div class="tech-item"><i class="devicon-powerbi-plain colored"></i>Power BI</div>
+            <div class="tech-item"><i class="devicon-excel-plain colored"></i>Excel</div>
         </div>
 
         <h2>My Projects</h2>
         <div class="project-container">
             <div class="project-card">
-                <div style="height:200px; background:#333;"></div> <div class="project-info">
+                <div style="height:200px; background:#333; display: flex; align-items: center; justify-content: center; color: #555;">[Project Image Here]</div> 
+                <div class="project-info">
                     <h3>Customer Churn Analysis</h3>
-                    <p>Predicting retention using Logistic Regression.</p>
+                    <p>Using Logistic Regression to identify at-risk customers and provide actionable retention strategies.</p>
                     <a href="#" class="btn">View Project</a>
                 </div>
             </div>
-            </div>
+        </div>
     </div>
 </body>
 </html>
