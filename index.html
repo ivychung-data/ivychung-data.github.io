@@ -55,11 +55,41 @@
         .tech-item i { font-size: 2.5rem; margin-bottom: 10px; display: inline-block; }
 
         /* Analytics Skills Grid */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 50px 0; }
-        .skill-category { background: var(--card-bg); padding: 25px; border-radius: 12px; text-align: left; border-top: 3px solid var(--accent); }
-        .skill-category h3 { margin-top: 0; font-size: 1.1rem; }
-        .skill-list { list-style: none; padding: 0; color: #aaa; font-size: 0.9rem; }
-        .skill-list li { margin-bottom: 8px; }
+        /* Updated Skills Grid for 6 Categories */
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin: 50px 0; 
+        }
+        .skill-category { 
+            background: var(--card-bg); 
+            padding: 25px; 
+            border-radius: 12px; 
+            text-align: left; 
+            border-top: 3px solid var(--accent); 
+            transition: 0.3s;
+        }
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-top-color: #ffffff;
+        }
+        .skill-category h3 { 
+            margin-top: 0; 
+            font-size: 1.1rem; 
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skill-list { 
+            list-style: none; 
+            padding: 0; 
+            color: #aaa; 
+            font-size: 0.85rem; 
+            line-height: 1.6;
+        }
+        .skill-list li { margin-bottom: 6px; }
 
         /* Projects */
         .project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -102,27 +132,73 @@
         <h2>My Analytics Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>🧹 Data Cleaning & Preprocessing</h3>
+                <h3>🧹 Data Cleaning & Preparation</h3>
                 <ul class="skill-list">
-                    <li>Missing Value Imputation</li>
-                    <li>Outlier Detection & Removal</li>
+                    <li>Data Profiling & Validation</li>
+                    <li>Missing Value Handling</li>
+                    <li>Outlier Detection & Treatment</li>
                     <li>Feature Engineering</li>
+                    <li>Normalization & Transformation</li>
+                    <li>Text Preprocessing for NLP</li>
                 </ul>
             </div>
+
             <div class="skill-category">
-                <h3>🔍 Exploratory Data Analysis (EDA)</h3>
+                <h3>🔍 EDA & Diagnostics</h3>
                 <ul class="skill-list">
-                    <li>Statistical Hypothesis Testing</li>
-                    <li>Multivariate Analysis</li>
-                    <li>Data Transformation & Scaling</li>
+                    <li>Univariate & Multivariate Analysis</li>
+                    <li>Customer & Revenue Segmentation</li>
+                    <li>Profitability & Cost Analysis</li>
+                    <li>Operational Bottleneck ID</li>
+                    <li>Variance & Comparative Performance</li>
+                    <li>Dimensionality Reduction</li>
                 </ul>
             </div>
+
             <div class="skill-category">
-                <h3>📊 Business Intelligence & Reporting</h3>
+                <h3>📊 BI & Visualization</h3>
                 <ul class="skill-list">
-                    <li>KPI Dashboard Design</li>
-                    <li>Automated Reporting Pipelines</li>
+                    <li>Tableau Dashboard Development</li>
+                    <li>Executive KPI Reporting</li>
+                    <li>Interactive Drill-Down Analytics</li>
+                    <li>Time Series Visualization</li>
                     <li>Geospatial Analysis</li>
+                    <li>Cohort & Funnel Reporting</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🤖 ML & Predictive Analytics</h3>
+                <ul class="skill-list">
+                    <li>Linear & Logistic Regression</li>
+                    <li>Decision Trees & Random Forest</li>
+                    <li>K-Means & Hierarchical Clustering</li>
+                    <li>Principal Component Analysis (PCA)</li>
+                    <li>RMSE & Classification Metrics</li>
+                    <li>Feature Selection Techniques</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>📈 Time Series & Forecasting</h3>
+                <ul class="skill-list">
+                    <li>ARIMA & SARIMA Models</li>
+                    <li>Holt-Winters Smoothing</li>
+                    <li>Trend & Seasonality Detection</li>
+                    <li>Forecast Accuracy Evaluation</li>
+                    <li>Demand & Revenue Forecasting</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🧪 Experimentation & Stats</h3>
+                <ul class="skill-list">
+                    <li>Hypothesis Testing</li>
+                    <li>A/B Testing Implementation</li>
+                    <li>Causal Thinking & Inference</li>
+                    <li>Regression Diagnostics</li>
+                    <li>Bias-Variance Analysis</li>
+                    <li>Confidence Intervals</li>
                 </ul>
             </div>
         </div>
