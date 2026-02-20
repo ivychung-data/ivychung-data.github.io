@@ -17,10 +17,36 @@
         body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; text-align: center; }
         .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
         
-        /* Hero Section */
-        header img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; }
-        h1 { font-size: 2.5rem; margin: 20px 0 5px; }
-        .tagline { color: #aaa; margin-bottom: 20px; }
+        /* New Horizontal Header Layout */
+        header { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            text-align: left; 
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .header-content { flex: 1; }
+
+        header img { 
+            width: 220px; 
+            height: 220px; 
+            border-radius: 50%; 
+            border: 3px solid var(--accent); 
+            object-fit: cover; 
+        }
+
+        header h1 { font-size: 3rem; margin: 0; }
+        .job-title { font-size: 1.2rem; font-weight: 700; color: #fff; margin: 10px 0; }
+        .tagline { color: var(--accent); font-weight: 400; margin-bottom: 15px; font-size: 1.1rem; }
+        .bio { color: #aaa; line-height: 1.6; max-width: 500px; margin: 0; }
+
+        /* Mobile Responsive adjustment */
+        @media (max-width: 768px) {
+            header { flex-direction: column-reverse; text-align: center; }
+            .bio { margin: 0 auto; }
+        }
 
         /* Tech Stack */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; margin: 50px 0; }
@@ -54,10 +80,13 @@
 <body>
     <div class="container">
         <header>
+            <div class="header-content">
+                <h1>Ivy C.</h1>
+                <p class="job-title">Business & Data Analytics</p>
+                <p class="tagline">Curious · Analytical · Detail Oriented</p>
+                <p class="bio">Driven by curiosity and disciplined by detail, I turn complexity into clarity that supports better decisions.</p>
+            </div>
             <img src="profile.jpg" alt="Ivy C.">
-            <h1>Ivy C.</h1>
-            <p class="tagline">Data Enthusiast | Problem Solver | Storyteller</p>
-            <a href="#" class="btn">📄 Download Resume</a>
         </header>
 
         <h2>Tech Stack</h2>
