@@ -92,12 +92,56 @@
         .skill-list li { margin-bottom: 6px; }
 
         /* Projects */
-        .project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; text-align: left; transition: 0.3s; }
-        .project-card:hover { transform: translateY(-10px); }
-        .project-info { padding: 20px; }
-        .btn { display: inline-block; padding: 10px 25px; background: var(--accent); color: #121212; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: 0.3s; }
-        .btn:hover { background: #ffffff; }
+        /* Project Cards Styling */
+        .project-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px;
+        }
+        .project-card { 
+            background: var(--card-bg); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            text-align: left; 
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-image { 
+            height: 250px; 
+            width: 100%; 
+            object-fit: cover; 
+            border-bottom: 1px solid #333;
+        }
+        .project-info { padding: 25px; flex-grow: 1; }
+        
+        /* Project Tags */
+        .tag-container { margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag { 
+            font-size: 0.7rem; 
+            font-weight: 800; 
+            padding: 4px 10px; 
+            border-radius: 5px; 
+            text-transform: uppercase;
+        }
+        .tag-python { background: #e0f2fe; color: #0369a1; }
+        .tag-ml { background: #f0fdf4; color: #166534; }
+        .tag-xgboost { background: #fff7ed; color: #9a3412; }
+        .tag-sql { background: #f5f3ff; color: #5b21b6; }
+
+        /* Button Grid */
+        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .btn-secondary { 
+            background: #a1a1aa; 
+            color: #121212; 
+            text-align: center; 
+            padding: 12px; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.9rem;
+        }
 
         /* Contact Section Styles */
         .contact-section { margin: 80px 0 40px; }
@@ -204,52 +248,43 @@
         </div>
 
         
-    <h2>My Projects</h2>
-    <div class="project-container">
-        <div class="project-card">
-            <div style="height:200px; background: linear-gradient(135deg, #2193b0, #6dd5ed); display: flex; align-items: center; justify-content: center; color: white; font-size: 50px; font-weight: bold; border-radius: 8px 8px 0 0;">
-                🩺
-            </div> 
-            <div class="project-info">
-                <div style="display: flex; gap: 5px; margin-bottom: 10px;">
-                    <span style="background: #e1f5fe; color: #01579b; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">PYTHON</span>
-                    <span style="background: #e8f5e9; color: #1b5e20; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">ML</span>
-                    <span style="background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">XGBOOST</span>
-                </div>
-                <h3>Diabetes Risk Prediction</h3>
-                <p>
-                    Diabetes is a global health crisis, yet many cases are preventable through early detection. Using a massive dataset of 253,680 individuals (CDC BRFSS 2015), this project identifies high-risk candidates and provides Prescriptive Recommendations based on American Diabetes Association (ADA) standards.
-                </p>
-                <div style="display: flex; gap: 10px; margin-top: 15px;">
-                    <a href="https://github.com/ivychung-data/diabetes-risk-prediction-model" class="btn" target="_blank" style="flex: 1; text-align: center;">Code & Repo</a>
-                    <a href="https://github.com/ivychung-data/diabetes-risk-prediction-model/blob/main/Diabetes%20Predictor.pdf" class="btn" target="_blank" style="flex: 1; text-align: center;">View Slides</a>
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" class="project-image" alt="Diabetes Prediction">
+                <div class="project-info">
+                    <div class="tag-container">
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-ml">ML</span>
+                        <span class="tag tag-xgboost">XGBoost</span>
+                    </div>
+                    <h3>Diabetes Risk Prediction</h3>
+                    <p>Using a massive dataset of 253,680 individuals, this project identifies high-risk candidates based on ADA standards.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn-secondary">Code & Repo</a>
+                        <a href="#" class="btn-secondary">View Slides</a>
+                    </div>
                 </div>
             </div>
-            
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/premium_photo-1661878265739-da90bc1af051?auto=format&fit=crop&q=80&w=1000" class="project-image" alt="SQL Analytics">
+                <div class="project-info">
+                    <div class="tag-container">
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-ml">ML</span>
+                        <span class="tag tag-sql">SQL</span>
+                    </div>
+                    <h3>Husky Corp Performance Analytics</h3>
+                    <p>Developed and queried a structured Oracle SQL database to connect inventory, supplier, and transaction data.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn-secondary" style="grid-column: span 2;">Code & Repo</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="project-card">
-            <div style="height:200px; background: linear-gradient(135deg, #2193b0, #6dd5ed); display: flex; align-items: center; justify-content: center; color: white; font-size: 50px; font-weight: bold; border-radius: 8px 8px 0 0;">
-                🩺
-            </div> 
-            <div class="project-info">
-                <div style="display: flex; gap: 5px; margin-bottom: 10px;">
-                    <span style="background: #e1f5fe; color: #01579b; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">PYTHON</span>
-                    <span style="background: #e8f5e9; color: #1b5e20; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">ML</span>
-                    <span style="background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">XGBOOST</span>
-                </div>
-                <h3>Husky Corp Operational & Financial Performance Analytics | SQL</h3>
-                <p>
-                    Developed and queried a structured Oracle SQL database to connect inventory, warehouse, supplier, and transaction data, delivering operational insights and financial performance analysis while ensuring data integrity.
-                </p>
-                <div style="display: flex; gap: 10px; margin-top: 15px;">
-                    <a href="https://github.com/ivychung-data/Inventory-Financial_Analytics_SQL" class="btn" target="_blank" style="flex: 1; text-align: center;">Code & Repo</a>
-                </div>
-            </div>
-            
-        </div>
-      
-    </div>
+        
 </section>
 
         <footer style="margin-top: 80px; padding-bottom: 20px; color: #666;">
